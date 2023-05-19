@@ -7,6 +7,7 @@ import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     UserLayoutComponent,
     SignupComponent,
     ForgetpasswordComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    UserHomePageComponent
   ],
   imports: [
     CommonModule,
