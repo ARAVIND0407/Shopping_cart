@@ -1,7 +1,9 @@
 .container{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg,rgba(0, 255, 115, 0.849),rgba(0, 205, 212, 0.979));
+    background: url(../../../assets/images/background.jpg);
+    background-position: center;
+    background-size: cover;
     display: grid;
     place-items: center;
 }
@@ -9,9 +11,9 @@
 .login_holder{
     width: 25rem;
     height: 30rem;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.181);
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid #ffffff4a;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
@@ -32,7 +34,7 @@ form{
 }
 .avatar img{
     width: 40%;
-    height: 68%;
+    height: 69%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -43,7 +45,17 @@ form{
     flex-direction: column;
     align-items: center;
 }
-
+ .input a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #0099ff;
+    transition: color 0.5s;
+    align-self: flex-end;
+    margin: 0.3rem 1.3rem;
+ }
+ .input a:hover{
+    color: #ff004f;
+ }
 .input input{
     width: 90%;
     height: 2.5rem;
@@ -52,7 +64,6 @@ form{
     border-radius: 5px;
     padding:0 1rem;
     transition: transform 0.5s;
-    margin-bottom: 1rem;
 }
 .input input:focus{
     border-bottom: 2px solid #0099ff;
@@ -60,9 +71,19 @@ form{
 }
 label{
     align-self: flex-start;
-    margin: 0 0 0.2rem 1.3rem;
+    margin: 0.5rem 0 0.2rem 1.3rem;
     font-weight: 600;
-    color: #00558d;
+    color: #0099ff;
+}
+form a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #0099ff;
+    transition: color 0.5s;
+    margin: 0.5rem 0;
+}
+form a:hover{
+    color: #ff004f;
 }
 
 #btn{
