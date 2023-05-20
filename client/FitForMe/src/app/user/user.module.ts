@@ -8,6 +8,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
+import { FooterComponent } from '../shared/footer/footer.component';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { UserHomePageComponent } from './user-home-page/user-home-page.component
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FooterComponent,
+    NavbarComponent
   ]
 })
 export class UserModule { }

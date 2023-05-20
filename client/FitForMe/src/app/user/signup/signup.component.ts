@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-
+MenuItem:string[]=["test1","test2","test3"]
 }

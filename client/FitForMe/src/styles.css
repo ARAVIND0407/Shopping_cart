@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
 
-*{
+html {
+    scroll-behavior: smooth;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0.1rem;
     background-color: #000;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--FFM-Blue);
 }
 
 :root {
     --FFM-Blue: #0099ff;
-    --FFM-DarkBlue:#004a7b;
+    --FFM-DarkBlue: #004a7b;
     --FFM-Dark: #222;
     --FFM-Red: #ff004f;
-  }
+}

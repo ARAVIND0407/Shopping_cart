@@ -1,1 +1,26 @@
-<p>signup works!</p>
+<main>
+    <app-navbar [IncomingData]="MenuItem"></app-navbar>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <div class="signup-holder">
+                <form>
+                    <div class="input">
+                        <label for="FName">First Name</label>
+                        <input type="text" name="FName" required placeholder="Viswanath">
+                        <label for="LName">Last Name</label>
+                        <input type="text" name="LName" required placeholder="R">
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" required placeholder="example@gmail.com">
+                        <label for="Password">Password</label>
+                        <input type="password" name="Password" required placeholder="Password">
+                        <label for="CPassword">Confirm Password</label>
+                        <input type="password" name="CPassword" required placeholder="Password">
+                    </div>
+                    <input [routerLink]="['/user/home']" id="btn" type="submit" value="Register now">
+                    <a [routerLink]="['/user/login']">Already have an account login?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
