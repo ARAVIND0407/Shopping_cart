@@ -4,16 +4,15 @@
         <div class="login_holder">
             <form>
                 <div class="avatar">
-                    <div class="imgHolder">
-                        <img src="../../../assets/images/profile_pic.jpg" alt="User">
-                    </div>
+                    <div class="imgHolder"></div>
+                    <img src="../../../assets/images/profile_pic.jpg" alt="User">
                 </div>
                 <div class="input">
                     <label for="Email">Email</label>
                     <input type="email" name="Email" required placeholder="example@gmail.com">
                     <label for="Password">Password</label>
                     <input type="password" name="Password" placeholder="Password">
-                    <a [routerLink]="['/user/password_reset']">forgotten password</a>
+                    <a [routerLink]="['/user/password_reset']">forgotten password ?</a>
                 </div>
                 <input [routerLink]="['/user/home']" id="btn" type="submit" value="LOGIN">
                 <a [routerLink]="['/user/signup']">Don't have an account create new</a>

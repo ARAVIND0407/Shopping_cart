@@ -7,11 +7,10 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { UserHomePageComponent } from './user-home-page/user-home-page.component';
 
 const routes: Routes = [{
-  path: 'user', component: UserLayoutComponent, children: [
+  path: '', component: UserLayoutComponent, children: [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
-    { path: 'password_reset', component: ForgetpasswordComponent },
-    { path: 'home', component: UserHomePageComponent }
+    { path: 'password_reset', component: ForgetpasswordComponent }
   ]
 }];
 
