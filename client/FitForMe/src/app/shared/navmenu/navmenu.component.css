@@ -4,8 +4,8 @@ li{
     margin: 0 15px;
     text-transform: uppercase;
     padding: 0.2rem 1rem;
-    border: 1px solid var(--FFM-Blue);
-    background-color: var(--FFM-DarkBlue);
+    background-color: var(--FFM-Blue);
+    border: 1px solid #0000;
     border-radius: 50px;
     transition: 0.5s;
 }
@@ -14,7 +14,6 @@ a{
     color: #fff;
 }
 li:hover{
-    border: 1px solid var(--FFM-DarkBlue);
-    background-color: var(--FFM-Blue);
-
+    border: 1px solid var(--FFM-Dark);
+    background-color: var(--FFM-DarkBlue);
 }
