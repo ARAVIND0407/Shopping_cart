@@ -6,7 +6,7 @@ footer{
 .about-holder{
     display: flex;
     font-size: 1rem;
-    color: #fff;
+    color: var(--FFM-Light);
     justify-content: space-around;
 
 }

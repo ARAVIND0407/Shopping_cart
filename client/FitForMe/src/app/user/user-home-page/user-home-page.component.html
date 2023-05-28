@@ -12,7 +12,8 @@
     </header>
     <section>
         <h1 class="Banner">Fit For Me</h1>
-        <div class="product">
+        <!-- <div class="product">
+        
             <div class="productHolder" *ngFor="let product of products">
                 <div class="imgHolder">
                     <a href="{{product.image}}" target="_blank"><img src="{{product.image}}" alt="product"></a>
@@ -26,7 +27,8 @@
             <a class="buyBtn" [routerLink]="['/user/login']">Buy now</a>
 
             </div>
-        </div>
+        </div> -->
+        <app-products></app-products>
     </section>
     <app-footer></app-footer>
 </div>
