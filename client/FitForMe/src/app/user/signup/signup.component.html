@@ -1,23 +1,33 @@
 <main>
-    <app-navbar [IncomingData]="MenuItem"></app-navbar>
+    <app-navbar></app-navbar>
     <div class="container">
         <div class="left"></div>
         <div class="right">
             <div class="signup-holder">
-                <form>
+                <form #form="ngForm" (ngSubmit)="formData(form)">
                     <div class="input">
                         <label for="FName">First Name</label>
-                        <input type="text" name="FName" required placeholder="Viswanath">
+                        <input type="text" name="FName" maxlength="25" minlength="3" placeholder="John"
+                            [(ngModel)]="userData.fName" #fName="ngModel" required="">
+                            <div class="errors" *ngIf="fName.invalid && fName.touched">
+                                <div class="errorDisplay"></div>
+                            </div>
                         <label for="LName">Last Name</label>
-                        <input type="text" name="LName" required placeholder="R">
+                        <input type="text" name="LName" minlength="1" maxlength="25" placeholder="Doe"
+                            [(ngModel)]="userData.lName" #lName="ngModel" required="">
                         <label for="Email">Email</label>
-                        <input type="email" name="Email" required placeholder="example@gmail.com">
+                        <input type="email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="johndoe12@gmail.com" [(ngModel)]="userData.email" #email="ngModel" required>
                         <label for="Password">Password</label>
-                        <input type="password" name="Password" required placeholder="Password">
+                        <input type="password" name="Password" minlength="8" maxlength="25"
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            placeholder="Password" [(ngModel)]="userData.password" #password="ngModel"
+                            (change)="savePassword($event)" required>
                         <label for="CPassword">Confirm Password</label>
-                        <input type="password" name="CPassword" required placeholder="Password">
+                        <input type="password" name="CPassword" placeholder="Password" [(ngModel)]="userData.tempPass"
+                            #tempPass="ngModel" (change)="handlePassword($event)" required>
                     </div>
-                    <input [routerLink]="['/user/home']" id="btn" type="submit" value="Register now">
+                    <input (click)="signupUser()" id="btn" type="submit" value="Register now">
                     <a [routerLink]="['/user/login']">Already have an account login?</a>
                 </form>
             </div>

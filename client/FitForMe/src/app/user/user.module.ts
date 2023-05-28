@@ -10,6 +10,7 @@ import { UserHomePageComponent } from './user-home-page/user-home-page.component
 import { FooterComponent } from '../shared/footer/footer.component';
 import { NavbarComponent } from '../shared/navbar/navbar.component';
 import { ProductsComponent } from '../shared/products/products.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProductsComponent } from '../shared/products/products.component';
     UserRoutingModule,
     FooterComponent,
     NavbarComponent,
-    ProductsComponent
+    ProductsComponent,
+    FormsModule
   ]
 })
 export class UserModule { }
