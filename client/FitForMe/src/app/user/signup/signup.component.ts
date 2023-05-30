@@ -40,11 +40,4 @@ export class SignupComponent {
   signupUser() {
     this.router.navigate(['/customer/home']);    
   }
-
-  formData(data: NgForm) {
-    if (data.valid) {
-      console.log(data.value);
-      
-    }
-  }
 }
