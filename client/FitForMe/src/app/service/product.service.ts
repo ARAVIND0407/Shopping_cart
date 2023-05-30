@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { API_Products } from '../helpers/utilities';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  Api: string = `https://fakestoreapi.com/products`;
 
   constructor(private http: HttpClient) { }
 
   getProducts() {
-    return this.http.get(this.Api);
+    return this.http.get(API_Products);
   }
 }

@@ -49,8 +49,9 @@
                             #tempPass="ngModel" (change)="handlePassword($event)" required>
                         <div class="strong" *ngIf="display==true">Password doesn't match</div>
                     </div>
-                    <input (click)="signupUser()" id="btn" type="submit" value="Register now">
-                    <a [routerLink]="['/user/login']">Already have an account login?</a>
+                    <input (click)="form.valid && signupUser()" (click)="btnClick()" id="btn" type="submit" value="Register now">
+                        <div class="strong2" *ngIf="btnClicked">Please fill all fields</div>
+                        <a [routerLink]="['/user/login']">Already have an account login?</a>
                 </form>
             </div>
         </div>
