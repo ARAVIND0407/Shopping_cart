@@ -20,9 +20,7 @@ export class ProductsComponent {
   ngOnInit() {
     this.service.getProducts().subscribe({
       next: (response: any) => {
-        this.products = response
-        console.log(this.products);
-        
+        this.products = response        
     }})
   }
 }
