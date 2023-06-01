@@ -1,0 +1,15 @@
+<div class="product">
+    <div class="productHolder" *ngFor="let product of products">
+        <div class="imgHolder">
+            <a href="{{product.image}}" target="_blank"><img src="{{product.image}}" alt="product"></a>
+        </div>
+        <div class="contentHolder">
+            <h1>{{product.title}}</h1>
+            <p>{{product.description}}</p>
+            <p class="bold">price : {{product.price | currency}}</p>
+            <p class="bold">Rating : {{product.rating.rate}}</p>
+        </div>
+    <a class="buyBtn" [routerLink]="['/user/login']">Buy now</a>
+
+    </div>
+</div>

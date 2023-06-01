@@ -1,0 +1,31 @@
+footer{
+    min-height: 15rem;
+    background-color: #111;
+    padding: 3rem;
+}
+.about-holder{
+    display: flex;
+    font-size: 1rem;
+    color: var(--FFM-Light);
+    justify-content: space-around;
+
+}
+.Section{
+    display: flex;
+    flex-direction: column;
+}
+.Section a{
+    text-decoration: none;
+    color: var(--FFM-Blue);
+    transition: 0.5s;
+}
+.Section a:hover{
+    transform: translateX(4px);
+    color: var(--FFM-Red);
+}
+.title{
+    font-weight: 300;
+}
+hr{
+    border-top: 1px solid #666;
+}

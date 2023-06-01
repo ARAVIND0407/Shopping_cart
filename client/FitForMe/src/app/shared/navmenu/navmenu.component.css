@@ -1,0 +1,19 @@
+li{
+    list-style: none;
+    display: inline-flex;
+    margin: 0 15px;
+    text-transform: uppercase;
+    padding: 0.2rem 1rem;
+    background-color: var(--FFM-Blue);
+    border: 1px solid #0000;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+a{
+    text-decoration: none;
+    color: var(--FFM-Light);
+}
+li:hover{
+    border: 1px solid var(--FFM-Dark);
+    background-color: var(--FFM-DarkBlue);
+}

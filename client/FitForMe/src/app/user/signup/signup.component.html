@@ -1,0 +1,59 @@
+<main>
+    <app-navbar></app-navbar>
+    <div class="container">
+        <div class="left">
+            <h1>FitForMe: Your Ultimate Destination for Premium Fitness Products!</h1>x
+        </div>
+        <div class="right">
+            <div class="signup-holder">
+                <form #form="ngForm">
+                    <div class="input">
+                        <label for="FName">First Name</label>
+                        <input type="text" name="FName" maxlength="25" minlength="3" placeholder="John"
+                            [(ngModel)]="userData.fName" #fName="ngModel" required="">
+                        <div class="errors" *ngIf="fName.invalid && fName.touched">
+                            <div class="errorDisplay" *ngIf="fName.errors?.['required']">Firstname required</div>
+                            <div class="errorDisplay" *ngIf="fName.errors?.['minlength']">Invalid Name</div>
+                            <div class="errorDisplay" *ngIf="fName.errors?.['maxlength']">Invalid Name</div>
+                        </div>
+                        <label for="LName">Last Name</label>
+                        <input type="text" name="LName" minlength="1" maxlength="25" placeholder="Doe"
+                            [(ngModel)]="userData.lName" #lName="ngModel" required="">
+                        <div class="errors" *ngIf="lName.invalid && lName.touched">
+                            <div class="errorDisplay" *ngIf="lName.errors?.['required']">Lastname required</div>
+                            <div class="errorDisplay" *ngIf="lName.errors?.['minlength']">Invalid Name</div>
+                            <div class="errorDisplay" *ngIf="lName.errors?.['maxlength']">Invalid Name</div>
+                        </div>
+                        <label for="Email">Email</label>
+                        <input type="email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="johndoe12@gmail.com" [(ngModel)]="userData.email" #email="ngModel" required>
+                        <div class="errors" *ngIf="email.invalid && email.touched">
+                            <div class="errorDisplay" *ngIf="email.errors?.['required']">Email required</div>
+                            <div class="errorDisplay" *ngIf="email.errors?.['pattern']">Invalid email</div>
+                        </div>
+                        <label for="Password">Password</label>
+                        <input type="password" name="Password" minlength="8" maxlength="25"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password"
+                            [(ngModel)]="userData.password" #password="ngModel" (change)="savePassword($event)"
+                            required>
+                        <div class="errors" *ngIf="password.invalid && password.touched">
+                            <div class="errorDisplay" *ngIf="password.errors?.['required']">Password required</div>
+                            <div class="errorDisplay" *ngIf="password.errors?.['pattern']">Password must contain one
+                                uppercase letter one lowercase letter one number and one symbol</div>
+                            <div class="errorDisplay" *ngIf="password.errors?.['minlength']">Password must be atleast 8
+                                charectors</div>
+                        </div>
+                        <div class="strong" *ngIf="password.valid">Strong</div>
+                        <label for="CPassword">Confirm Password</label>
+                        <input type="password" name="CPassword" placeholder="Password" [(ngModel)]="userData.tempPass"
+                            #tempPass="ngModel" (change)="handlePassword($event)" required>
+                        <div class="strong" *ngIf="display==true">Password doesn't match</div>
+                    </div>
+                    <input (click)="form.valid && signupUser()" (click)="btnClick()" id="btn" type="button" value="Register now">
+                        <div class="strong2" *ngIf="btnClicked">Please fill all fields</div>
+                        <a [routerLink]="['/user/login']">Already have an account login?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

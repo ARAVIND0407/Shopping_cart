@@ -1,0 +1,21 @@
+.container{
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    background-position-y: bottom;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.err-404{
+    width: 20rem;
+    height: 20rem;
+    background-color: aqua;
+    margin: 2rem auto;
+}
+.err-404 video{
+    width: 100%;
+    height: 100%;
+}
+.err-404 p{
+    font-size: 1rem;
+}

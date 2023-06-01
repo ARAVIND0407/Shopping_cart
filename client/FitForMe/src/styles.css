@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0.1rem;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--FFM-Blue);
+}
+
+:root {
+    --FFM-Blue: #0099ff;
+    --FFM-DarkBlue: #004a7b;
+    --FFM-Dark: #222;
+    --FFM-Light: #fff;
+    --FFM-Red: #ff004f;
+    --FFM-Green: rgb(0, 230, 65);
+}

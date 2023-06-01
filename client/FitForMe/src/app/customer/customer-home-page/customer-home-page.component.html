@@ -1,0 +1,18 @@
+<div class="container">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../../../assets/images/logo SVG.svg" alt="logo">
+            </div>
+            <div class="btnHolder">
+                <h1>Welcome <span *ngIf="CustomerData != null">{{CustomerData.name.firstname}} {{CustomerData.name.lastname}}</span>
+                    <span *ngIf="CustomerData == null">Customer</span></h1>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <h1 class="Banner">Fit For Me</h1>
+        <app-products></app-products>
+    </section>
+    <app-footer></app-footer>
+</div>
