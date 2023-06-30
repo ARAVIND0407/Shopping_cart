@@ -9,7 +9,7 @@
             <p class="bold">price : {{product.price | currency}}</p>
             <p class="bold">Rating : {{product.rating.rate}}</p>
         </div>
-    <a class="buyBtn" [routerLink]="['/user/login']">Buy now</a>
-
+    <a class="buyBtn" [routerLink]="['/user/login']" *ngIf="LoginStatus == false">Add to cart</a>
+    <a class="buyBtn" *ngIf="LoginStatus == true" (click)="SendData(product)">Add to cart</a>
     </div>
 </div>

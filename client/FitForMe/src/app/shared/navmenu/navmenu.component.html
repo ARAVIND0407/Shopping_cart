@@ -1,5 +1,8 @@
 <div class="menuitems">
-    <ul>
-        <li *ngFor="let item of MenuItem"><a href="#{{item}}">{{item}}</a></li>
+    <ul *ngIf="Customer == true">
+        <li *ngFor="let item of MenuItem"><a [routerLink]="['/customer/'+item]">{{item}}</a></li>
+    </ul>
+    <ul *ngIf="Customer == false">
+        <li *ngFor="let item of MenuItem"><a [routerLink]="['/user/'+item]">{{item}}</a></li>
     </ul>
 </div>

@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navmenu.component.css']
 })
 export class NavmenuComponent{
+  customer = false;
   @Input() MenuItem?: string[];
+  @Input() Customer?: boolean;
 }
 

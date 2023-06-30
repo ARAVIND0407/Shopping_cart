@@ -1,5 +1,5 @@
 <main>
-    <app-navbar [IncomingData]="MenuItem"></app-navbar>
+    <app-navbar [IncomingData]="MenuItem" [Customer]="false"></app-navbar>
     <div class="container">
         <div class="left">
             <h1>FitForMe: Your Ultimate Destination for Premium Fitness Products!</h1>
@@ -18,7 +18,7 @@
                         <input type="password" name="Password" placeholder="Password">
                         <a [routerLink]="['/user/password_reset']">forgotten password ?</a>
                     </div>
-                    <input [routerLink]="['/user/home']" id="btn" type="submit" value="LOGIN">
+                    <input [routerLink]="['/customer/home']" id="btn" type="submit" value="LOGIN">
                     <a [routerLink]="['/user/signup']">Don't have an account create new</a>
                 </form>
             </div>
