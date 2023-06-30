@@ -1,0 +1,62 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(var(--FFM-Blue),var(--FFM-Dark));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productList{
+    width: 90%;
+    height: 53%;
+    padding: 2rem 3rem;
+    background: var(--FFM-Light);
+    border-radius: 20px;
+    margin-top: 5rem;
+}
+.productItems{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    background: var(--FFM-LightBlue);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productItems a{
+    text-decoration: none;
+    background: var(--FFM-Blue);
+    color: var(--FFM-Light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+.productItems a:hover{
+    background-color: var(--FFM-DarkBlue);
+}
+.quantity{
+    display: flex;
+    width: 6rem;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.quantity button{
+    width: 30px;
+    height: 100%;
+    background-color: var(--FFM-Light);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--FFM-DarkBlue);
+    transition: 0.2s;
+}
+.quantity button:hover{
+    color: var(--FFM-Light);
+    background-color: var(--FFM-DarkBlue);
+}

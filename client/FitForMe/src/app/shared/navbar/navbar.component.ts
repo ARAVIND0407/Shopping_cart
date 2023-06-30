@@ -12,4 +12,5 @@ import { NavmenuComponent } from '../navmenu/navmenu.component';
 })
 export class NavbarComponent {
   @Input() IncomingData?: string[];
+  @Input() Customer?: boolean;
 }

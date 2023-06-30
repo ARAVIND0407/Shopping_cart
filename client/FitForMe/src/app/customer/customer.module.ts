@@ -7,6 +7,7 @@ import { CustomerLayoutComponent } from './customer-layout/customer-layout.compo
 import { FooterComponent } from '../shared/footer/footer.component';
 import { ProductsComponent } from '../shared/products/products.component';
 import { CartComponent } from './cart/cart.component';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CartComponent } from './cart/cart.component';
     CommonModule,
     CustomerRoutingModule,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    NavbarComponent
   ]
 })
 export class CustomerModule { }
